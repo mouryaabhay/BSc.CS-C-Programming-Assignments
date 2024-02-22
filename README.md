@@ -1,2 +1,2 @@
 # C Programming Assignment
-> This repo inlcude all of the C programmes of 2nd Semester.
+**All of the C programming assignments finished during the second semester are collected in this repository.**
