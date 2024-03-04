@@ -49,10 +49,10 @@ void acceptDetails(Student s[100], int n)
 
 void bubbleSort(Student s[100], int n)
 {
-    int i, j;
+    int pass, j;
     Student temp;
-    for (i = 0; i < n - 1; i++)
-        for (j = 0; j < n - i - 1; j++)
+    for (pass = 1; pass < n ; pass++)
+        for (j = 0; j < n - pass; j++)
             if (s[j].percentage < s[j + 1].percentage)
             {
                 temp = s[j];
