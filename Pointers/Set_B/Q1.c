@@ -3,10 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void accept () {
-
-}
-
 int main() {
     int i, j, r, c;
     int *p[10]; // Array of pointers to hold addresses of rows
