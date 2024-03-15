@@ -15,7 +15,7 @@ int main() {
     scanf(" %c", &var1);
     printf("Enter a single value for second variable: ");
     scanf(" %c", &var2);
-    printf("\n\nBefore swapping\n First Variable = %c\n Second Variable = %c\n", var1, var2);
+    printf("\nBefore swapping\n First Variable = %c\n Second Variable = %c\n", var1, var2);
     swapvar(&var1, &var2);  // Call the swap function
     printf("\nAfter swapping\n First Variable = %c\n Second Variable = %c\n", var1, var2);
     return 0;

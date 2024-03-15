@@ -10,7 +10,7 @@ void countevenodd(int n, int *arr, int *evencount, int *oddcount) {
             (*evencount)++;  // Increment evencount using pointer dereference
         else
             (*oddcount)++;   // Increment oddcount using pointer dereference
-        }
+    }
 }
 
 int main() {
