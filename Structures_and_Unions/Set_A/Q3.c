@@ -1,3 +1,10 @@
+// Accept details of ‘n’ students and Write a menu driven program to perform the following operations on the details.
+// 1. Display all
+// 2. Display all with percentage > p
+// 3. Display student details having maximum percentage
+// 4. Search by name
+// 5. Search by roll number.
+
 #include <stdio.h>
 #include <string.h>
 

@@ -1,4 +1,4 @@
-// Program to calculate the trace of n x n matrix
+// Write a program to calculate the trace of a n x n matrix.
 
 #include <stdio.h>
 

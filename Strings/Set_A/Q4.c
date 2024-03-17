@@ -1,4 +1,7 @@
-//Program which accepts a string and return 1 if the string is palindrome and 0 otherwise.
+// A palindrome is a string that reads the same-forward and reverse. Example: “madam” is a Palindrome.
+// Write a function which accepts a string and returns 1 if the string is a palindrome and 0 otherwise.
+// Use this function in main.
+// int isPalindrome(char str[20])
 
 #include <stdio.h>
 #include <string.h>

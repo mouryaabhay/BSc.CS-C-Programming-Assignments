@@ -1,9 +1,7 @@
-/*
-A program with a search function that accepts an array of n elements and a key as parameters
-and returns the position of the key in the array and -1 if the key is not found. 
-It accepts n numbers from the user, stores them in an array, accepts the key to be searched, 
-and searches using this function.
-*/
+// Write a function for Search, which accepts an array of n elements and a key as parameters and returns the position of key in the array and -1 if the key is not found.
+// Accept n numbers from the user, store them in an array.
+// Accept the key to be searched and search it using this function.
+// Display appropriate messages. 
 
 #include <stdio.h>
 

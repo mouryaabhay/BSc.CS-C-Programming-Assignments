@@ -1,4 +1,4 @@
-// Program to find the add of a matrix.
+// Write a program to find the transpose of a matrix.
 
 #include <stdio.h>
 
@@ -23,7 +23,7 @@ void add(int x[20][20], int y[20][20], int z[20][20], int r, int c)
 // Function to display the elements of a matrix
 void display(int x[20][20], int r, int c)
 {
-    int i, j
+    int i, j;
     for (i = 0; i < r; i++)
     {
         for (j = 0; j < c; j++)

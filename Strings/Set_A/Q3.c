@@ -1,8 +1,6 @@
-/*
-    A program that will accept a string and character to search.
-    The program will call a function which will search for the occurrence
-    position of the character in the string and return its position.
-*/
+// Write a program that will accept a string and character to search.
+// The program will call a function, which will search for the occurrence position of the character in the string and return its position.
+// Function should return –1 if the character is not found in the string.
 
 #include <stdio.h>
 

@@ -1,4 +1,5 @@
-// Program which returns the largest number from an array.
+// Write a function which returns the largest number from an array.
+// Use this in main to display the largest number from an array of n elements.
 
 #include <stdio.h>
 

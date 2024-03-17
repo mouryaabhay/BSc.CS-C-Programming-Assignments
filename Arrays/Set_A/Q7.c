@@ -1,4 +1,5 @@
-// Program to merge two sorted arrays into the third array such that it is also sorted.
+// Write a function to merge two sorted arrays into a third array such that it is also sorted.
+// Use this function in main.
 
 #include <stdio.h>
 

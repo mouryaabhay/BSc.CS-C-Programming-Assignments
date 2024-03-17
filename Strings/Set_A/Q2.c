@@ -1,13 +1,5 @@
-/*
-Menu driven program to perform the following operations on strings:
-1. LENGTH
-2. COPY
-3. CONCATENATE
-4. COMPARE
-5. UPPERCASE
-6. LOWERCASE
-7. REVERSE
-*/
+// Write a menu driven program to perform the following operations on strings using predefined functions:
+// LENGTH, COPY, CONCATENATE, COMPARE, UPPERCASE, LOWERCASE, REVERSE
 
 #include <stdio.h>
 #include <string.h>

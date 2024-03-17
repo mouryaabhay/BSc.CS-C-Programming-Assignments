@@ -1,3 +1,7 @@
+// Write a program to accept details of ‘n’ employees (id, name, designation, information).
+// If the designation is ‘M’ (for manager) store the number of departments and if the designation is ‘W’ (for worker), store the department name.
+// Display details of all Managers and workers.
+
 #include <stdio.h>
 #include <string.h>
 

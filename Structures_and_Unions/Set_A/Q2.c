@@ -1,4 +1,4 @@
-// A program to accept details of n students (roll no, name, percentage) and display them.
+// Write a program to accept details of n students (roll no, name, percentage) and display them (using functions).
 
 #include <stdio.h>
 

@@ -1,4 +1,5 @@
-// Program to accept two strings and compare them.
+// Write a program to accept two strings and Compare them.
+// Display appropriate messages.
 
 #include <stdio.h>
 #include <string.h>

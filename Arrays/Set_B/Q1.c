@@ -1,4 +1,4 @@
-// Program to accept and display a matrix of order m x n.
+// Write a program to accept and display a matrix of order m x n.
 
 #include <stdio.h>
 

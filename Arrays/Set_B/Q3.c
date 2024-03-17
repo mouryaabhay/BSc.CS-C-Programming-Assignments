@@ -1,4 +1,4 @@
-// Program to add two matrices and siplay their sum.
+// Write a program to add two matrices and display their sum.
 
 #include <stdio.h>
 

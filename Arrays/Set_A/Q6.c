@@ -1,4 +1,5 @@
-// Program to sort n elements in ascending order using bubble sort.
+// Write a function to sort n elements in the ascending order using Bubble sort.
+// Use this function in main to sort n integers and display the sorted set.
 
 #include <stdio.h>
 

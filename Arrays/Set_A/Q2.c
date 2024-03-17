@@ -1,4 +1,4 @@
-// A program to accept n numbers and display them in the reverse order using functions.
+// Write a program to accept n numbers and display them in the reverse order using functions. 
 
 #include <stdio.h>
 

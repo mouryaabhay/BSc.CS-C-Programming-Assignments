@@ -1,4 +1,5 @@
-// Write a program to swap the values of two variables using a function. The charerchanged values should be displayed in main.
+// Write a program to swap the values of two variables using a function.
+// The charerchanged values should be displayed in main.
 
 #include <stdio.h>
 

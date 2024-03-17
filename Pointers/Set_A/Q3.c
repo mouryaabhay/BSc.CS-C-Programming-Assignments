@@ -1,4 +1,6 @@
-// Write a program to accept and display n integers. Also calculate their sum and average. (Use dynamic memory allocation)
+// Write a program to accept and display n integers.
+// Also calculate their sum and average.
+// (Use dynamic memory allocation)
 
 #include <stdio.h>
 #include <stdlib.h>

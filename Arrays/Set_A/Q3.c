@@ -1,4 +1,9 @@
-// This program calculates the number of occurrences of a specific element in an array.
+// Write a function which returns the number of occurrences of a specific element in an array.
+// Use this function in main.
+// Example: Input 1 5 2 1 6 3 8 2 9 15 1 30
+// Number: 1
+// Output: 1 occurs 3 times
+
 #include <stdio.h>
 
 // Function to accept elements into an array

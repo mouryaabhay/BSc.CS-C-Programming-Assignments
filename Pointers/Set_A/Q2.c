@@ -1,4 +1,6 @@
-// Accept n integers in array A. Pass this array and two counter variables to a function which will set the first counter to the total number of even values in the array and the other to the total number of odd values. Display these counts in main.
+// Accept n integers in array A.
+// Pass this array and two counter variables to a function which will set the first counter to the total number of even values in the array and the other to the total number of odd values.
+// Display these counts in main.
 // (Hint: Pass the addresses of the counters to the function)
 
 #include <stdio.h>

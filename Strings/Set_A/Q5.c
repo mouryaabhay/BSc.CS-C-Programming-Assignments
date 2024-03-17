@@ -1,10 +1,5 @@
-/*
-  Program: Sentence Modifier
-  Description: Accepts a sentence from the user and alters it as follows:
-               1. Replaces every space with a *
-               2. Reverses the case of all alphabets
-               3. Replaces digits with ?
-*/
+// Write a program which accepts a sentence from the user and alters it as follows:
+// Every space is replaced by *, case of all alphabets is reversed, digits are replaced by ?
 
 #include <stdio.h>
 #include <string.h>

@@ -1,4 +1,4 @@
-// Write a program to accept two strings as command line arguments and compare the strings
+// Write a program to accept two strings as command line arguments and compare the strings.
 
 #include <stdio.h>
 #include <string.h>

@@ -1,3 +1,5 @@
+// Write a program to accept details of ‘n’ students (roll number, name, birthdate, marks of 6 subjects, percentage) and Sort student details in descending order of percentage.
+
 #include <stdio.h>
 #include <string.h>
 

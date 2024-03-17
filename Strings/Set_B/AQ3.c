@@ -1,3 +1,6 @@
+// Define two arrays of strings, one containing country names (ex: India, France etc) and the other containing their capitals (ex: Delhi, Paris etc).
+// Accept a country name from the user and display its capital.
+
 #include <stdio.h>
 #include <string.h>
 

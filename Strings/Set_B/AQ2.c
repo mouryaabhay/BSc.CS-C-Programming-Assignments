@@ -1,3 +1,5 @@
+// Write a program to accept the names of n cities and display the name having longest length.
+
 #include <stdio.h>
 #include <string.h>
 

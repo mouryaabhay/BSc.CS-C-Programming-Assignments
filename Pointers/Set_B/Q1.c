@@ -1,4 +1,5 @@
-// Write a program to accept and display an integer matrix of size rXc. (Use dynamic memory allocation)
+// Write a program to accept and display an integer matrix of size r x c.
+// (Use dynamic memory allocation)
 
 #include <stdio.h>
 #include <stdlib.h>
