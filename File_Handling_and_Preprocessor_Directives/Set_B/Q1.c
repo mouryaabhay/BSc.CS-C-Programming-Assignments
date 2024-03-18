@@ -19,6 +19,7 @@ int main () {
         printf ("File opening error.");
     }
     else {
+        printf ("Student Details\n");
         printf ("Roll.No\t\tName\t\tPercentage\n");
         while (!feof(fp)) {
             fscanf (fp, "%d%s%f", &Student.rno, Student.name, &Student.perc);

@@ -29,14 +29,11 @@ int main(int argc, char *argv[]) {
         if (ch == '\n' || ch == '\t' || ch == '\0' || ch == ',' || ch == '.' || ch == ' ' || ch == ':') {
             if (flag == 1) {
                 countword++;
-                flag = 0;
-            }
-            else {
-                flag = 1; // Signifies the end of a word.
+                flag = 0; // Tracks whether we are currently outside a word (0)
             }
         }
         else {
-            flag = 1; // Signifies the beginning of a new word.
+            flag = 1; // Tracks whether we are currently in a word (1)
         }
     }
 
