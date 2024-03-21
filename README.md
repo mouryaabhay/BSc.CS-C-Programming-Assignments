@@ -11,7 +11,7 @@
   - Assignment 1: Testing the Errors and Simple Programs.
     > [Visit](Semester_1_-_Basic_'C'_programmes/Testing_Errors_and_Simple_Programs/README.md)
   - Assignment 2: To demonstrate the use of data types, simple operators and expressions.
-    > [Visit](Semester_1_-_Basic_'C'_programmes/Data_Types,_Simple_Operators_and_Expressions/README.md)
+    > [Visit](Semester_1_-_Basic_'C'_programmes/Data_Types_and_Simple_Operators/README.md)
   - Assignment 3: To demonstrate the use of decision making structures.
     > [Visit](Semester_1_-_Basic_'C'_programmes/Decision_Making_and_Switch_Statements/README.md)
   - Assignment 4: Loop Control Structures.
