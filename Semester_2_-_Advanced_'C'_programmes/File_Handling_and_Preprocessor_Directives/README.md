@@ -11,7 +11,7 @@
     4. MAX3 (x,y,z) – nested
     <p>Include this file in your program. Write a menu driven program to use these macros in the program.
     
-   > [View Code](Set_A/Q2.c)
+   > [View Code](Set_A/Q2)
 3. Write a program to read the contents of a file (passed as command line argument) and display its contents on the screen. Also display total number of characters, lines and words in the file.
     > [View Code](Set_A/Q3.c)
 4. Write a program to copy the contents of one file to another (filenames are passed as command line arguments).
