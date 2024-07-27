@@ -1,5 +1,5 @@
 <h1 align = "center"></h1>
-<h1 align = "center">📚 C Programming Assignment</h1>
+<h1 align = "center">BSc.CS - First Year<br>👨🏻‍💻 C Programming Assignment</h1>
 <h3 align = "center">All of the C programming assignments, finished during the First Year of the BSc.CS are stored in this repository.</h3>
 <br>
 <h1 align = "center"></h1>
