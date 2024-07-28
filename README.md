@@ -1,10 +1,12 @@
-<h1 align = "center"></h1>
-<h1 align = "center">BSc.CS - First Year<br>👨🏻‍💻 C Programming Assignment</h1>
-<h3 align = "center">All of the C programming assignments, finished during the First Year of the BSc.CS are stored in this repository.</h3>
-<br>
-<h1 align = "center"></h1>
-<h2 align = "center">📝 Table of Content</h2>
+***
+<h1 align = "center">👨🏻‍💻 BSc.CS C Programming Assignment</h1>
+<h3 align = "center">BSc Computer Science C Programming Assignments Archive</h3><br>
+
+***
+<h2 align = "left">📝 Table of Content</h2>
+
 <h3 align = "left">First Year C Programming Assignments</h3>
+
 <details>
   <summary>Semester 1: Basic 'C' programmes</summary>
 
@@ -32,4 +34,12 @@
     > [Visit](Semester_2_-_Advanced_'C'_programmes/Pointers/README.md)
   - Assignment 5: To demonstrate File Handling and Preprocessor directives.
     > [Visit](Semester_2_-_Advanced_'C'_programmes/File_Handling_and_Preprocessor_Directives/README.md)
+</details>
+
+<h3 align = "left">Second Year C Programming Assignments</h3>
+<details>
+  <summary>Semester 3: Data Structures and Alogrithms</summary>
+
+  - Practice Assignment of C Programming: Functions, Array, Pointers & Structures.
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Practice_Assignment_1_of_C_Programming\README.md)
 </details>
