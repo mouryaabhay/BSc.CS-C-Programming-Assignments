@@ -26,7 +26,7 @@
 <h3 align = "left">'C' Array</h3>
 
 5. Write a C program to swap two integers using call by values and call by reference.
-    > [View Code](Slot-2/Q1.c)
+    > [View Code](Slot-2/Q5.c)
 
 <h3 align = "left">'C' Structures</h3>
 
@@ -35,14 +35,29 @@
     - Accept details of 5 students (rollno, name, (marks of 5 subjects for each student)).
     - Calculate percentage of students and display the details in a proper format.<br>
     ㅤㅤRoll NoㅤㅤName of StudentㅤㅤMarks Percentage
-    > [View Code](Slot-2/Q2.c)
+    > [View Code](Slot-2/Q6.c)
+
 7.  Write a menu driven program in C using array of Structure.
     - Create a structure named employee (emp_code, ename, salary).
     - Accept the details of 5 Employees from user and perform the following operations using function.
         - Search by emp_code.
         - Display all Employee details.
         - Display Details of employee having Salary > 20000.
-    > [View Code](Slot-2/Q3.c)
+    > [View Code](Slot-2/Q7.c)
+
+<br><br>
+
+***
+<h2 align = "left">Additional Questions</h2>
+
+8. Write a C Program to calculate the sum of digits of a number (Without using Recurssion).
+    > [View Code](Additional-Programs/Q8.c)
+
+9. Write a program to add two matrices and display their sum.
+    > [View Code](Additional-Programs/Q9.c)
+
+10. Write a program to multiply two matrices and display their product.
+    > [View Code](Additional-Programs/Q10.c)
 
 ***
 
