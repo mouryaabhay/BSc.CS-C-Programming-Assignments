@@ -1,4 +1,4 @@
-// Write a program to add two matrices and display their sum.
+// Write a program to find the transpose of a matrix.
 
 #include <stdio.h>
 

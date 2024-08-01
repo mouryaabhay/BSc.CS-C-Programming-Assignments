@@ -34,9 +34,9 @@
 
 1. Write a program to accept and display a matrix of order m x n.
     > [View Code](Set-B/Q1.c)
-2. Write a program to find the transpose of a matrix.
+2. Write a program to add two matrices and display their sum.
     > [View Code](Set-B/Q2.c)
-3. Write a program to add two matrices and display their sum.
+3. Write a program to find the transpose of a matrix.
     > [View Code](Set-B/Q3.c)
 4. Write a program to calculate the trace of a n x n matrix.
     > [View Code](Set-B/Q4.c)
