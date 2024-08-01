@@ -7,7 +7,7 @@ void accept(int x[20][20], int r, int c) {
     int i, j;
     for (i = 0; i < r; i++)
         for (j = 0; j < c; j++)
-            scanf ("%d", &x[i][j]);
+            scanf("%d", &x[i][j]);
 }
 
 // Function to find the product of two matrices and store the result in another matrix
@@ -35,37 +35,43 @@ void display(int x[20][20], int r, int c) {
     int i, j;
     for (i = 0; i < r; i++) {
         for (j = 0; j < c; j++) {
-            printf ("%d\t", x[i][j]);
+            printf("%d\t", x[i][j]);
         }
-        printf ("\n");
+        printf("\n");
     }
 }
 
 int main() {
-    int a[20][20], b[20][20], c[20][20], m, n, p;
+    int a[20][20], b[20][20], c[20][20], r1, c1, r2, c2;
 
-    printf ("\nEnter the number of rows and columns of the first matrix:\n");
-    scanf ("%d%d", &m, &n);
+    printf("\nEnter the number of rows and columns of the first matrix:\n");
+    scanf("%d%d", &r1, &c1);
 
-    printf ("\nEnter the number of columns of the second matrix:\n");
-    scanf ("%d", &p);
+    printf("\nEnter the number of rows and columns of the second matrix:\n");
+    scanf("%d%d", &r2, &c2);
 
-    printf ("\nEnter the elements of the first matrix:\n");
-    accept(a, m, n);
+    // Check if the matrices can be multiplied
+    if (c1 != r2) {
+        printf("Error: Matrices cannot be multiplied.\n");
+        return 1;
+    }
 
-    printf ("\nEnter the elements of the second matrix:\n");
-    accept(b, n, p);
+    printf("\nEnter the elements of the first matrix:\n");
+    accept(a, r1, c1);
+    
+    printf("\nEnter the elements of the second matrix:\n");
+    accept(b, r2, c2);
 
-    multiply(a, b, c, m, n, p);
+    multiply(a, b, c, r1, c1, c2);
 
-    printf ("\nThe first matrix is:\n");
-    display(a, m, n);
+    printf("\nThe first matrix is:\n");
+    display(a, r1, c1);
 
-    printf ("\nThe second matrix is:\n");
-    display(b, n, p);
+    printf("\nThe second matrix is:\n");
+    display(b, r2, c2);
 
-    printf ("The product of both the matrices is:\n");
-    display(c, m, p);
+    printf("The product of both the matrices is:\n");
+    display(c, r1, c2);
 
     return 0;
 }
