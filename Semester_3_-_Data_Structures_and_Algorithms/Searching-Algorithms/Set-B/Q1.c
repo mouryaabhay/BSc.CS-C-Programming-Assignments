@@ -1,0 +1,1 @@
+// Read the data from file'cities.txt' containing names of cities and their STD codes. Accept a name of the city from user and use linear search to check whether the name is present in the file and output the STD code, otherwise output "city not in the list".

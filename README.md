@@ -40,6 +40,9 @@
 <details>
   <summary>Semester 3: Data Structures and Alogrithms</summary>
 
-  - Practice Assignment of C Programming: Functions, Array, Pointers & Structures.
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Practice_Assignment_1_of_C_Programming\README.md)
+  - Practice Assignment of C Programming: Functions, Array, Pointers & Structures
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Practice-Assignment-of-C-Programming\README.md)
+  
+  - Assignment 1: Searching Algorithms
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Searching-Algorithms\README.md)
 </details>

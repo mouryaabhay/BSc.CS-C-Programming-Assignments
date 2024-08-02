@@ -1,0 +1,1 @@
+// Accept n sorted values in array from user. Accept a value x from user and write a function to implement binary search algorithm to check whether the number is present in sorted array or not and output the position if the number is present.
