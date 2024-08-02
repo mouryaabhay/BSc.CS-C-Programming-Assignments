@@ -1,0 +1,10 @@
+Mumbai 22
+Pune 20
+Nagpur 712
+Aurangabad 240
+Nashik 253
+Solapur 217
+Amravati 721
+Akola 724
+Kolhapur 231
+Dhule 251

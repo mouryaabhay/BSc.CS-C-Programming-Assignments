@@ -2,6 +2,14 @@
 
 #include <stdio.h>
 
+// Function to accept array of integers from user
+void accept(int arr[], int n) {
+    int i;
+    for (i = 0; i < n; i++) {
+        scanf ("%d", &arr[i]);
+    }
+}
+
 // Function to perform binary search
 int binarySearch(int arr[], int n, int key) {
     int begin = 0, end = n - 1, mid;
@@ -33,9 +41,7 @@ int main() {
     int arr[n];
 
     printf ("Enter %d sorted elements:\n", n);
-    for (i = 0; i < n; i++) {
-        scanf ("%d", &arr[i]);
-    }
+    accept(arr, n);
     
     printf ("Enter the value to search: ");
     scanf ("%d", &x);
