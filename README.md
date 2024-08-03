@@ -8,6 +8,7 @@
 <h3 align = "left">First Year C Programming Assignments</h3>
 
 <details>
+
   <summary>Semester 1: Basic 'C' programmes</summary>
 
   - Assignment 1: Testing the Errors and Simple Programs.
@@ -20,8 +21,10 @@
     > [Visit](Semester_1_-_Basic_'C'_programmes/Simple_Loops_and_Nested_Loops/README.md)
   - Assignment 5: To demonstrate library and user defined functions.
     > [Visit](Semester_1_-_Basic_'C'_programmes/User_Defined_and_Library_functions/README.md)
+
 </details>
 <details>
+
   <summary>Semester 2: Advanced 'C' programmes</summary>
 
   - Assignment 1: To demonstrate use of 1-D and arrays and functions.
@@ -34,15 +37,32 @@
     > [Visit](Semester_2_-_Advanced_'C'_programmes/Pointers/README.md)
   - Assignment 5: To demonstrate File Handling and Preprocessor directives.
     > [Visit](Semester_2_-_Advanced_'C'_programmes/File_Handling_and_Preprocessor_Directives/README.md)
+
 </details>
 
 <h3 align = "left">Second Year C Programming Assignments</h3>
+
 <details>
+
   <summary>Semester 3: Data Structures and Alogrithms</summary>
 
   - Practice Assignment of C Programming: Functions, Array, Pointers & Structures
     > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Practice-Assignment-of-C-Programming\README.md)
-  
   - Assignment 1: Searching Algorithms
     > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Searching-Algorithms\README.md)
+  - Assignment 2: Sorting Algorithms - I
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Sorting-Algorithms-I\README.md)
+  - Assignment 3: Sorting Algorithms - II
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Sorting-Algorithms-II\README.md)
+  - Assignment 4: Stack Implementation
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Stack-Implementation\README.md)
+  - Assignment 5: Stack Application
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Stack-Application\README.md)
+  - Assignment 6: Singly Linked List
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Singly-Linked-List\README.md)
+  - Assignment 7: Applications of Singly Linked List
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Applications-of-Singly-Linked-List\README.md)
+  - Assignment 8: Doubly Linked List
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Doubly-Linked-List\README.md)
+
 </details>
