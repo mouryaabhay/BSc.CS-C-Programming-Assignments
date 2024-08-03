@@ -13,7 +13,7 @@
 ***
 <h2 align = "left">Set B</h2>
 
-1. Read the data from file'cities.txt' containing names of cities and their STD codes. Accept a name of the city from user and use linear search to check whether the name is present in the file and output the STD code, otherwise output "city not in the list".
+1. Read the data from file `'cities.txt'` containing names of cities and their STD codes. Accept a name of the city from user and use linear search to check whether the name is present in the file and output the STD code, otherwise output "city not in the list".
     > [View Code](Set-B/Q1.c)
-2. Read the data from file ‘sortedcities.txt’ containing sorted names of cities and their STD codes. Accept a name of the city from user and use binary search to check whether the name is present in the file and output the STD code, otherwise output "city not in the list".
+2. Read the data from file `'sortedcities.txt'` containing sorted names of cities and their STD codes. Accept a name of the city from user and use binary search to check whether the name is present in the file and output the STD code, otherwise output "city not in the list".
     > [View Code](Set-B/Q2.c)

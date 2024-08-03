@@ -1,0 +1,1 @@
+// Sort a random array of n integers (create a random array of n integers) in ascending order by using insertion sort algorithm.

@@ -1,0 +1,1 @@
+// Implement a stack library (dystack.h) of integers using a dynamic (linked list) implementation of the stack and implementing the above five operations. Write a driver program that includes stack library and calls different stack operations.

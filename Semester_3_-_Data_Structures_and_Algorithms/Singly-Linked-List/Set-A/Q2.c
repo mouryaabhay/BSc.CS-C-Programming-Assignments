@@ -1,0 +1,1 @@
+// Implement a list library (singlylist.h) for a singly linked list. Create a linked list, reverse it and display reversed linked list.

@@ -56,8 +56,8 @@
     > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Sorting-Algorithms-II\README.md)
   - Assignment 4: Stack Implementation
     > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Stack-Implementation\README.md)
-  - Assignment 5: Stack Application
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Stack-Application\README.md)
+  - Assignment 5: Application of Stack
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Application-of-Stack\README.md)
   - Assignment 6: Singly Linked List
     > [Visit](Semester_3_-_Data_Structures_and_Algorithms\Singly-Linked-List\README.md)
   - Assignment 7: Applications of Singly Linked List

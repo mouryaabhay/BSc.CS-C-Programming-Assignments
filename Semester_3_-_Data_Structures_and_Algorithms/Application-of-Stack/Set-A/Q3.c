@@ -1,0 +1,1 @@
+// Write a program to convert an infix expression to its equivalent postfix notation and evaluate. Consider usual precedence's of operators. Use stack library of stack of characters using static implementation.

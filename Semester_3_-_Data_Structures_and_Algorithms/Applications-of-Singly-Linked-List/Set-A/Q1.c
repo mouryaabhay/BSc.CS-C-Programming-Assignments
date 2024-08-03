@@ -1,0 +1,1 @@
+// Write a program that merges two ordered linked lists into third new list. When two lists are merged the data in the resulting list are also ordered. The two original lists should be left unchanged. That is merged list should be new one. Use linked implementation.

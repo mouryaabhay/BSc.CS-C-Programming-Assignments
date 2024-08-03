@@ -3,17 +3,7 @@
 
 <h2 align = "left">Set A</h2>
 
-1. 
+1. Implement a list library `(singlylist.h)` for a singly linked list with the above six operations. Write a menu driven driver program to call the operations.
     > [View Code](Set-A/Q1.c)
-2. 
+2. Implement a list library `(singlylist.h)` for a singly linked list. Create a linked list, reverse it and display reversed linked list.
     > [View Code](Set-A/Q2.c)
-
-<br><br>
-
-***
-<h2 align = "left">Set B</h2>
-
-1. 
-    > [View Code](Set-B/Q1.c)
-2. 
-    > [View Code](Set-B/Q2.c)
