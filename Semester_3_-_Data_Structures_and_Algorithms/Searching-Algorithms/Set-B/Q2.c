@@ -19,7 +19,8 @@ int find_city(City cities[], int num_cities, char search_city[]) {
         if (cmp == 0) {
             printf("STD code: %s\n", cities[mid].std_code);
             return 1; // City found
-        } else if (cmp < 0) {
+        }
+        if (cmp < 0) {
             begin = mid + 1;
         } else {
             end = mid - 1;
