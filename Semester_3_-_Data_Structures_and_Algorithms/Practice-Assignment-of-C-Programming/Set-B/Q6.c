@@ -19,14 +19,15 @@ void main() {
 
     // Accept students detail and calculate percentage
     for (i = 0; i < 5; i++) {
-        printf ("Enter roll no of student %d: ", i+1);
+        sum = 0;
+        printf ("Enter roll no of student %d: ", i + 1);
         scanf ("%d", &s[i].rollno);
 
-        printf ("Enter name of student %d: ", i+1);
+        printf ("Enter name of student %d: ", i + 1);
         scanf ("%s", s[i].name);
 
         for (j = 0; j < 5; j++) {
-            printf ("Enter marks of subject %d for student %d: ", j+1, i+1);
+            printf ("Enter marks of subject %d for student %d: ", j + 1, i + 1);
             scanf ("%d", &s[i].marks[j]);
             sum += s[i].marks[j];
         }

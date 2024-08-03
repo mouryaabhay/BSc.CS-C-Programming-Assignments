@@ -22,7 +22,7 @@ void display(int a[20], int n) {
 
 int maximum(int a[20], int n) {
     int i, max;
-    for (i = 1; i < n; i++) {
+    for (i = 0; i < n; i++) {
         if (a[i] > max) {
             max = a[i];
         }
@@ -32,7 +32,7 @@ int maximum(int a[20], int n) {
 
 int minimum(int a[20], int n) {
     int i, min;
-    for (i = 1; i < n; i++) {
+    for (i = 0; i < n; i++) {
         if (a[i] < min) {
             min = a[i];
         }
