@@ -1,3 +1,5 @@
+// Sort a random array of n integers (create a random array of n integers) in ascending order by using recursive Quick sort algorithm.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -19,58 +21,61 @@ void display(int a[], int n) {
 }
 
 // Function to swap two elements in the array
-void swap(int A[], int i, int j) {
+void swap(int a[], int x, int y) {
     int temp;
-    temp = A[i];
-    A[i] = A[j];
-    A[j] = temp;
+    temp = a[x];
+    a[x] = a[y];
+    a[y] = temp;
 }
 
 // Function to partition the array around a pivot element
-int partition(int A[], int lb, int ub) {
-    // Choose the first element as the pivot
-    int pivot = A[lb];
-    // Initialize two indices, one at the beginning of the array and one at the end
+int partition(int a[], int lb, int ub) {
+    // Start from the second element (exclude pivot)
+    // lb + 1 ensures pivot is not compared with itself
     int down = lb + 1;
     int up = ub;
 
+    // Choose the first element as the pivot
+    int pivot = a[lb];
+
     // Loop until the two indices meet
     while (1) {
-        // Move the down index to the right until we find an element greater than the pivot
-        while (A[down] <= pivot) {
+        // Move the down index to the right until we find an element greater than or equal to the pivot
+        while (a[down] <= pivot && down < up) {
             down++;
         }
 
-        // Move the up index to the left until we find an element less than or equal to the pivot
-        while (A[up] > pivot) {
+        // Move the up index to the left until we find an element less than the pivot
+        while (a[up] > pivot && up >= down) {
             up--;
         }
 
-        // If the down index is still less than the up index, swap the elements at the two indices
+        // If the down index is still less than the up index, it means we've found a pair of elements that are in the wrong order
         if (down < up) {
-            swap(A, down, up);
+            // Swap the elements at the two indices to put them in the correct order relative to the pivot
+            swap(a, down, up);
         } else {
-            // If the down index is not less than the up index, break out of the loop
+            // If the down index is not less than the up index, it means the partitioning is complete
             break;
         }
     }
 
-    // Swap the pivot element with the element at the up index
-    swap(A, lb, up);
-    // Return the index of the pivot element
+    // Swap the pivot element with the element at the up index, which is the final position of the pivot element in the sorted array
+    swap(a, lb, up);
+    // Return the index of the pivot element, which will be used to recursively sort the subarrays
     return up;
 }
 
 // Recursive function to sort the array using Quick sort algorithm
-void quickSort(int a[], int low, int high) {
-    int pivot;
-    if (low < high) {
+void quickSort(int a[], int lb, int ub) {
+    int j;
+    if (lb < ub) {
         // Partition the subarray around a pivot element
-        pivot = partition(a, low, high);
+        j = partition(a, lb, ub);
         // Recursively sort the subarray of elements smaller than the pivot
-        quickSort(a, low, pivot - 1);
+        quickSort(a, lb, j - 1);
         // Recursively sort the subarray of elements greater than the pivot
-        quickSort(a, pivot + 1, high);
+        quickSort(a, j + 1, ub);
     }
 }
 
