@@ -46,7 +46,7 @@ int partition(int a[], int lb, int ub) {
         }
 
         // Move the up index to the left until we find an element less than the pivot
-        while (a[up] > pivot && up >= down) {
+        while (a[up] > pivot && up > lb) {
             up--;
         }
 
