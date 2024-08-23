@@ -1,4 +1,4 @@
-// Sort a random array of n integers (create a random array of n integers) in ascending order by using recursive Quick sort algorithm.
+// Sort a random array of n integers (create a random array of n integers) in ascending order by using iterative Quick sort algorithm.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,14 +32,14 @@ void swap(int a[], int x, int y) {
 int partition(int a[], int lb, int ub) {
     // Start from the second element (exclude pivot)
     // lb + 1 ensures pivot is not compared with itself
-    int down = lb + 1;
+    int down = lb;
     int up = ub;
 
     // Choose the first element as the pivot
     int pivot = a[lb];
 
     // Loop until the two indices meet
-    while (1) {
+    do {
         // Move the down index to the right until we find an element greater than or equal to the pivot
         while (a[down] <= pivot && down < up) {
             down++;
@@ -54,15 +54,12 @@ int partition(int a[], int lb, int ub) {
         if (down < up) {
             // Swap the elements at the two indices to put them in the correct order relative to the pivot
             swap(a, down, up);
-        } else {
-            // If the down index is not less than the up index, it means the partitioning is complete
-            break;
         }
-    }
+    } while (down < up);
 
     // Swap the pivot element with the element at the up index, which is the final position of the pivot element in the sorted array
     swap(a, lb, up);
-    // Return the index of the pivot element, which will be used to recursively sort the subarrays
+    // Return the index of the pivot element, which will be used to iteratively sort the subarrays
     return up;
 }
 
