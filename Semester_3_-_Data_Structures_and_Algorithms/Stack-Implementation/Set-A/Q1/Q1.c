@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "ststack.h"
 
-void printStack(STACK *PS) {
+void displayStack(STACK *PS) {
     printf("Stack: ");
     for (int i = 0; i <= PS->top; i++) {
         printf("%d ", PS->data[i]);
@@ -33,18 +33,18 @@ int main() {
                 printf("Enter number to push: ");
                 scanf("%d", &num);
                 push(&s, num);
-                printStack(&s);
+                displayStack(&s);
                 break;
             case 2:
                 num = pop(&s);
                 if (num != -1) {
                     printf("Popped number: %d\n", num);
                 }
-                printStack(&s);
+                displayStack(&s);
                 break;
             case 3:
                 num = peek(&s);
-                printStack(&s);
+                displayStack(&s);
                 if (num != -1) {
                     printf("Top number: %d\n", num);
                 }
