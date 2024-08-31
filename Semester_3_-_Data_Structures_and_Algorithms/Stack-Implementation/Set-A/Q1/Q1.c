@@ -5,18 +5,18 @@
 
 void displayStack(STACK *PS) {
     printf("Stack: ");
-    for (int i = 0; i <= PS->top; i++) {
-        printf("%d ", PS->data[i]);
+    for (int i = 0; i <= PS -> top; i++) {
+        printf("%d ", PS -> data[i]);
     }
     printf("\n");
 }
 
 int main() {
     STACK s;
-    initSTACK(&s);
+    initialize(&s);
     int choice, num = 0;
 
-    while (1) {
+    do {
         printf("\nStack Operations Menu:\n");
         printf("1. Push\n");
         printf("2. Pop\n");
@@ -30,38 +30,52 @@ int main() {
 
         switch (choice) {
             case 1:
-                printf("Enter number to push: ");
-                scanf("%d", &num);
-                push(&s, num);
-                displayStack(&s);
-                break;
-            case 2:
-                num = pop(&s);
-                if (num != -1) {
-                    printf("Popped number: %d\n", num);
+                if (isFull(&s)) {
+                    printf("Stack is full. Cannot push.\n");
+                } else {
+                    printf("Enter number to push: ");
+                    scanf("%d", &num);
+                    push(&s, num);
+                    displayStack(&s);
                 }
-                displayStack(&s);
                 break;
+
+            case 2:
+                if (isEmpty(&s)) {
+                    printf("Stack is empty. Cannot pop.\n");
+                } else {
+                    num = pop(&s);
+                    printf("Popped number: %d\n", num);
+                    displayStack(&s);
+                }
+                break;
+
             case 3:
                 num = peek(&s);
                 displayStack(&s);
-                if (num != -1) {
+                if (num == -1) {
+                    printf("Stack is empty.\n");
+                } else {
                     printf("Top number: %d\n", num);
                 }
                 break;
+
             case 4:
                 printf("Is stack empty? %d\n", isEmpty(&s));
                 break;
+
             case 5:
                 printf("Is stack full? %d\n", isFull(&s));
                 break;
+
             case 6:
                 printf("Exiting...\n");
-                return 0;
+                break;
+
             default:
-                printf("Invalid choice. Please try again.\n");
+                printf("Invalid choice.\n");
         }
-    }
+    } while (choice != 6);
 
     return 0;
 }

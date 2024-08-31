@@ -5,7 +5,7 @@ typedef struct stack {
     int top;
 } STACK;
 
-void initSTACK(STACK *PS) {
+void initialize(STACK *PS) {
     PS -> top = -1;
 }
 
