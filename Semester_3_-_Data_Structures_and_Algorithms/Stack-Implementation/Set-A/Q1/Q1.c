@@ -11,25 +11,23 @@ void displayStack(STACK *PS) {
     printf("\n");
 }
 
-int main() {
+void main() {
+    int num, choice;
     STACK s;
-    initialize(&s);
-    int choice, num = 0;
+    initstack(&s);
 
     do {
         printf("\nStack Operations Menu:\n");
         printf("1. Push\n");
         printf("2. Pop\n");
         printf("3. Peek\n");
-        printf("4. Check if empty\n");
-        printf("5. Check if full\n");
-        printf("6. Exit\n\n");
+        printf("4. Exit\n\n");
 
         printf("Enter your choice: ");
         scanf("%d", &choice);
 
         switch (choice) {
-            case 1:
+            case 1: /* Push */
                 if (isFull(&s)) {
                     printf("Stack is full. Cannot push.\n");
                 } else {
@@ -40,42 +38,29 @@ int main() {
                 }
                 break;
 
-            case 2:
+            case 2: /* Pop */
                 if (isEmpty(&s)) {
                     printf("Stack is empty. Cannot pop.\n");
                 } else {
-                    num = pop(&s);
-                    printf("Popped number: %d\n", num);
+                    printf("Popped number: %d\n", pop(&s));
                     displayStack(&s);
                 }
                 break;
 
-            case 3:
-                num = peek(&s);
+            case 3: /* Peek */
                 displayStack(&s);
-                if (num == -1) {
+                if (isEmpty(&s))
                     printf("Stack is empty.\n");
-                } else {
-                    printf("Top number: %d\n", num);
-                }
+                else
+                    printf("Top number: %d\n", peek(&s));
                 break;
 
             case 4:
-                printf("Is stack empty? %d\n", isEmpty(&s));
-                break;
-
-            case 5:
-                printf("Is stack full? %d\n", isFull(&s));
-                break;
-
-            case 6:
                 printf("Exiting...\n");
                 break;
 
             default:
                 printf("Invalid choice.\n");
         }
-    } while (choice != 6);
-
-    return 0;
+    } while (choice != 4);
 }

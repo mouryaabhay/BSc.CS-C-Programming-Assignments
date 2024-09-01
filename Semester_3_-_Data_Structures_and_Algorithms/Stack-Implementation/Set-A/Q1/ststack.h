@@ -1,19 +1,16 @@
-#define MAXSIZE 100
+#define MAXSIZE 10
 
-typedef struct stack {
+typedef struct {
     int data[MAXSIZE];
     int top;
 } STACK;
 
-void initialize(STACK *PS) {
+void initstack(STACK *PS) {
     PS -> top = -1;
 }
 
 int isEmpty(STACK *PS) {
-    if (PS -> top == -1)
-        return 1;
-    else
-        return 0;
+    return(PS -> top == -1);
 }
 
 int isFull(STACK *PS) {
@@ -21,19 +18,13 @@ int isFull(STACK *PS) {
 }
 
 void push(STACK *PS, int num) {
-    ++PS -> top;
-    PS -> data[PS -> top] = num;
+    PS -> data[++PS -> top] = num;
 }
 
 int pop(STACK *PS) {
-    int num;
-    num = PS -> data[PS -> top];
-    PS -> top--;
-    return num;
+    return(PS -> data[PS -> top --]);
 }
 
 int peek(STACK *PS) {
-    int num;
-    num = PS -> data[PS -> top];
-    return num;
+    return(PS -> data[PS -> top]);
 }
