@@ -6,7 +6,7 @@
 
 void displayStack() {
     printf("Stack: ");
-    Node* temp = top;
+    Node *temp = top;
     while (temp != NULL) {
         printf("%d ", temp -> info);
         temp = temp -> next;
