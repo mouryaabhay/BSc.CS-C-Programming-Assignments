@@ -46,10 +46,10 @@ int main() {
                 break;
 
             case 3: /* Peek */
-                displayStack();
                 if (isEmpty())
                     printf("Stack is empty.\n");
                 else
+                    displayStack();
                     printf("Top number: %d\n", peek());
                 break;
 
