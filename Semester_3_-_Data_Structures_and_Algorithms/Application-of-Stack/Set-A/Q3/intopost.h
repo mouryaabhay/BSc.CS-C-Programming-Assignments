@@ -1,160 +1,137 @@
 #include <math.h>
-#define MAX_SIZE 100
+#define MAXSIZE 100
 
 typedef struct {
-    char data[MAX_SIZE];
+    int data[MAXSIZE];
     int top;
-} Stack;
+} STACK;
 
-void initStack(Stack *s) {
-    s->top = -1;
+void initStack(STACK *ps) {
+    ps->top = -1;
 }
 
-int isEmpty(Stack *s) {
-    if(s->top == -1)
-        return 1;
-    else
-        return 0;
+int isEmpty(STACK *ps) {
+    return (ps->top == -1);
 }
 
-void push(Stack *s, char ch) {
-    s->data[++s->top] = ch;
+int isFull(STACK *ps) {
+    return (ps->top == MAXSIZE - 1);
 }
 
-char pop(Stack *s) {
-    char ch;
-    ch = s->data[s->top--];
-    return ch;
+int pop(STACK *ps) {
+    return (ps->data[ps->top--]);
 }
 
-char peek(Stack *s) {
-    char ch;
-    ch = s->data[s->top];
-    return ch;
+void push(STACK *ps, int n) {
+    ps->data[++ps->top] = n;
 }
 
-int priority(char op) {
-    switch (op) {
+int peek(STACK *ps) {
+    return (ps->data[ps->top]);
+}
+
+int priority(char ch) {
+    switch (ch) {
         case '+':
-        case '-':
-            return 1;  // Priority 1 for '+' and '-'
+        case '-': return 1;  // Priority 1 for '+' and '-'
         case '*':
         case '/':
-        case '%':
-            return 2;  // Priority 2 for '*', '/' and '%'
+        case '%': return 2;  // Priority 2 for '*', '/' and '%'
         case '^':
-        case '$':
-            return 3;  // Priority 3 for '^' and '$'
-        default:
-            return 0;  // Default priority 0 for other characters
+        case '$': return 3;  // Priority 3 for '^' and '$'
+        default: return 0;  // Default priority 0 for other characters
     }
 }
 
-void infixToPostfix(char *infix, char *postfix) {
-    // Step 3: Opstk is an empty stack
-    Stack opstk;
+void infixToPostfix(char infix[], char postfix[]) {
+    // Step 1: Initialize an empty stack for operators
+    STACK opstk;
     initStack(&opstk);
     int i = 0, j = 0;
+    char ch, ch1;
 
-    // Step 4: Read a character ch from the infix string
-    while (infix[i] != '\0') {
-        char ch = infix[i];
+    // Step 2: Scan the infix expression from left to right
+    for (i = 0; infix[i] != '\0'; i++) {
+        ch = infix[i];
 
-        // Step 5: If ch is an operand, add ch to the postfix string
+        // Step 3: Process each character of the infix expression
         switch (ch) {
             case '(':
-                // Step 6: If ch is an opening bracket, push ch into opstk
+                // Step 4: If the character is an opening parenthesis, push it onto the stack
                 push(&opstk, ch);
                 break;
             case '+':
             case '-':
             case '*':
             case '/':
+            case '%':
             case '^':
-                // Step 7: If ch is an operator
+            case '$':
+                // Step 5: If the character is an operator
+                // Step 5.1: While the stack is not empty and the top of the stack has higher or equal precedence to the current operator
                 while ((!isEmpty(&opstk) && priority(peek(&opstk))) >= priority(ch)) {
-                    // Pop from opstk and add to postfix string
+                    // Pop operators from the stack and add to the postfix expression
                     postfix[j++] = pop(&opstk);
                 }
-                // Push ch into opstk
+                // Step 5.2: Push the current operator onto the stack
                 push(&opstk, ch);
                 break;
             case ')':
-                // Step 8: If ch is a closing bracket
-                while (!isEmpty(&opstk) && peek(&opstk) != '(') {
-                    // Pop till '(' and add to postfix string
-                    postfix[j++] = pop(&opstk);
+                // Step 6: If the character is a closing parenthesis
+                // Step 6.1: Pop operators from the stack and add to the postfix expression until an opening parenthesis is encountered
+                while ((ch1 = pop(&opstk)) != '(') {
+                    postfix[j++] = ch1;
                 }
-                if (!isEmpty(&opstk) && peek(&opstk) == '(') {
-                    // Pop the '(' from opstk
-                    pop(&opstk);
-                }
+                // Note: The opening parenthesis is popped but not added to the postfix expression
                 break;
             default:
-                // If ch is an operand
-                if (ch != ' ') {
-                    // Add ch to the postfix string
-                    postfix[j++] = ch;
-                }
+                // Step 7: If the character is an operand, add it to the postfix expression
+                postfix[j++] = ch;
         }
-        i++;  // Increment i at the end of the loop
     }
 
-    // Step 10: While opstk is not empty
+    // Step 8: After scanning the entire infix expression, pop any remaining operators from the stack and add to the postfix expression
     while (!isEmpty(&opstk)) {
-        // Pop and add to postfix string
         postfix[j++] = pop(&opstk);
     }
 
-    // Step 11: Terminate the postfix string
+    // Step 9: Terminate the postfix expression string
     postfix[j] = '\0';
 }
 
-int evaluatePostfix(char *postfix) {
-    Stack evalstk;
+int evaluatePostfix(char postfix[]) {
+    STACK evalstk;
     initStack(&evalstk);
-    int i = 0;
+    int i = 0, op1, op2, result;
+    char ch;
 
-    while (postfix[i] != '\0') {
-        char ch = postfix[i];
+    for (i = 0; postfix[i] != '\0'; i++) {
+        ch = postfix[i];
 
         if (ch >= '0' && ch <= '9') {
-            // If ch is a digit, push it into evalstk
             push(&evalstk, ch - '0');
         } else {
-            // If ch is an operator, pop two operands and evaluate
-            int op2 = pop(&evalstk);
-            int op1 = pop(&evalstk);
-            int result;
+            op2 = pop(&evalstk);
+            op1 = pop(&evalstk);
 
             switch (ch) {
-                case '+':
-                    result = op1 + op2;
-                    break;
-                case '-':
-                    result = op1 - op2;
-                    break;
-                case '*':
-                    result = op1 * op2;
-                    break;
-                case '/':
-                    result = op1 / op2;
-                    break;
-                case '%':
-                    result = op1 % op2;
-                    break;
+                case '+': push(&evalstk, op1 + op2);
+                          break;
+                case '-': push(&evalstk, op1 - op2);
+                          break;
+                case '*': push(&evalstk, op1 * op2);
+                          break;
+                case '/': push(&evalstk, op1 / op2);
+                          break;
+                case '%': push(&evalstk, op1 % op2);
+                          break;
                 case '^':
-                    result = pow(op1, op2);
-                    break;
+                case '$': push(&evalstk, pow(op1, op2));
+                          break;
+                default: push(&evalstk, 0);
+                          break;
             }
-
-            // Push the result back into evalstk
-            push(&evalstk, result);
         }
-
-        i++;
     }
-
-    // The final result is the top element of evalstk
     return pop(&evalstk);
 }
