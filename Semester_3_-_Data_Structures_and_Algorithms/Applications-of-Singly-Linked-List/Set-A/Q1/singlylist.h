@@ -12,7 +12,7 @@ void createlist(NODE *head) {
     for(count = 1; count<= n; count++) {
         newnode = (NODE*) malloc(sizeof(NODE));
         newnode -> next = NULL;
-        printf("\nEnter the node %d data: ", count);
+        printf("Enter the node %d data: ", count);
         scanf("%d", &newnode -> info);
         last -> next = newnode;
         last = newnode;
@@ -98,4 +98,59 @@ void display(NODE *head) {
         printf("%d\t", temp -> info);
     }
     printf("\n");
+}
+
+void reverse(NODE *head) {
+    NODE *t1 = head -> next, *t2, *t3;
+    if(t1 == NULL) {
+        return;
+    }
+    t2 = t1 -> next;
+    if(t2 == NULL) {
+        return;
+    }
+    t3 = t2 -> next;
+    t1 -> next = NULL;
+    while(t3!=NULL) {
+        t2 -> next = t1;
+        t1 = t2;
+        t2 = t3;
+        t3 = t3 -> next;
+    }
+    t2 -> next = t1;
+    head -> next = t2;
+}
+
+void merge(NODE *head1, NODE *head2, NODE *head3) {
+    NODE *t1 = head1 -> next, *t2 = head2 -> next, *last = head3, *newnode;
+    while (t1 != NULL && t2 != NULL) {
+        newnode = (NODE *) malloc(sizeof(NODE));
+        newnode -> next = NULL;
+        if(t1 -> info < t2 -> info) {
+            newnode -> info = t1 -> info;
+            t1 = t1 -> next;
+        } else {
+            newnode -> info = t2 -> info;
+            t2 = t2 -> next;
+        }
+        /* Attach newnode */
+        last -> next = newnode;
+        last = newnode;
+    }
+    while (t1 != NULL) { /* First list has not ended. */
+        newnode = (NODE *) malloc(sizeof(NODE));
+        newnode -> info = t1 -> info;
+        newnode -> next = NULL;
+        t1 = t1 -> next;
+        last -> next = newnode;
+        last = newnode;
+    }
+    while (t2 != NULL) { /* Second list has not ended. */
+        newnode = (NODE *) malloc(sizeof(NODE));
+        newnode -> info = t2 -> info;
+        newnode -> next = NULL;
+        t2 = t2 -> next;
+        last -> next = newnode;
+        last = newnode;
+    }    
 }

@@ -4,14 +4,14 @@
 #include <string.h>
 #include "cststack.h"
 
-int main() {
-    char str[20];
-    int n;
-    STACK PS;
-    initstack(&PS);
-    printf("Enter a sentence: ");
-    gets(str);
+void main() {
+    char str[MAXSIZE];
+    printf("Enter a word: ");
+    scanf("%s", str);
     reverse(str);
-    printf("The reversed string is \"%s\".", str);
-    return 0;
+    printf("The reversed string is \"%s\".\n", str);
+    if(isPalindrome(str))
+        printf("\"%s\" is a palindrome.\n", str);
+    else
+        printf("\"%s\" is not a palindrome.\n", str);
 }

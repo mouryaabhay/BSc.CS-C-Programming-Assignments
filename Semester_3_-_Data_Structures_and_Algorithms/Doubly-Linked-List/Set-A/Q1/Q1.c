@@ -1,14 +1,17 @@
-// Implement a list library(singlylist.h) for a singly linked list with the above six operations. Write a menu driven driver program to call the operations.
+// Implement a list library (doublylist.h) for a doubly linked list with the above four operations. Write a menu driven driver program to call the operations append, insert, delete specific node, delete at position, search, display.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "singlylist.h"
+#include "doublylist.h"
 
 void main() {
     NODE *head;
-    int choice, n, pos;
-    head = (NODE*)malloc(sizeof(NODE));
+    head = (NODE *) malloc(sizeof(NODE));
     head -> next = NULL;
+    head -> prev = NULL;
+
+    int choice, num, pos;
+
     do {
         printf("\n====== Menu ======");
         printf("\n1. CREATE");
@@ -27,14 +30,14 @@ void main() {
                 break;
             case 2:
                 printf("\nEnter the element and position: ");
-                scanf("%d%d", &n, &pos);
-                insert(head, n, pos);
+                scanf("%d%d", &num, &pos);
+                insert(head, num, pos);
                 display(head);
                 break;
             case 3:
                 printf("\nEnter the element: ");
-                scanf("%d",&n);
-                deletevalue(head, n);
+                scanf("%d",&num);
+                deletevalue(head, num);
                 display(head);
                 break;
             case 4:
@@ -45,10 +48,10 @@ void main() {
                 break;
             case 5:
                 printf("\nEnter the element to be searched: ");
-                scanf("%d",&n);
-                pos = search(head, n);
+                scanf("%d",&num);
+                pos = search(head, num);
                 if(pos == -1)
-                    printf("\nElement not found");
+                    printf("\nElement not found.2");
                 else
                     printf("\nElement found at position %d", pos + 1);
                 break;
@@ -58,10 +61,11 @@ void main() {
                 break;
             case 7:
                 printf("\nEnter a number to append: ");
-                scanf("%d", &n);
-                append(head, n);
-                printf("\nNumber appended.");
+                scanf("%d", &num);
+                append(head, num);
+                printf("\nNumber appended:\n");
                 display(head);
+                break;
             case 8:
                 printf("Exiting...");
                 break;

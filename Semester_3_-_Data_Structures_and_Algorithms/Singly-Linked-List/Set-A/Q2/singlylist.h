@@ -20,12 +20,19 @@ void createlist(NODE *head) {
 }
 
 void append(NODE *head, int num) {
-    NODE *newnode;
+    NODE *newnode, *temp;
     newnode = (NODE *) malloc(sizeof(NODE));
     newnode -> info = num;
-    newnode -> next = head -> next;
-    // Attach newnode to node after head
-    head -> next = newnode;
+    newnode -> next = NULL;
+    if(head -> next == NULL) {
+        head -> next = newnode;
+    } else {
+        temp = head -> next;
+        while(temp -> next != NULL) {
+            temp = temp -> next;
+        }
+        temp -> next = newnode;
+    }
 }
 
 void insert(NODE *head, int num, int pos) {
