@@ -1,4 +1,3 @@
-#include <math.h>
 #define MAXSIZE 100
 
 typedef struct {
