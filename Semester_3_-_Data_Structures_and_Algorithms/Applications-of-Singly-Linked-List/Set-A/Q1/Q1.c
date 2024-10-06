@@ -15,9 +15,12 @@ void main() {
 
     printf("\nList 1:\n");
     createlist(head1);
+    display(head1);
+
     printf("\nList 2:\n");
     createlist(head2);
-    
+    display(head2);
+
     printf("\nMerged List:\n");
     merge(head1, head2, head3);
     display(head3);
