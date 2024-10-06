@@ -11,42 +11,39 @@ void main() {
     head -> prev = NULL;
 
     int choice, num, pos;
+    createlist(head);
 
     do {
         printf("\n====== Menu ======");
-        printf("\n1. CREATE");
-        printf("\n2. INSERT");
-        printf("\n3. DELETE BY NUMBER");
-        printf("\n4. DELETE BY POSITION");
-        printf("\n5. SEARCH");
-        printf("\n6. DISPLAY");
-        printf("\n7. APPEND");
-        printf("\n8. EXIT\n");
+        printf("\n1. INSERT");
+        printf("\n2. DELETE BY NUMBER");
+        printf("\n3. DELETE BY POSITION");
+        printf("\n4. SEARCH");
+        printf("\n5. DISPLAY");
+        printf("\n6. APPEND");
+        printf("\n7. EXIT\n");
         printf("\nEnter your choice: ");
         scanf("%d", &choice);
         switch(choice) {
             case 1:
-                createlist(head);
-                break;
-            case 2:
                 printf("\nEnter the element and position: ");
                 scanf("%d%d", &num, &pos);
                 insert(head, num, pos);
                 display(head);
                 break;
-            case 3:
+            case 2:
                 printf("\nEnter the element: ");
                 scanf("%d",&num);
                 deletevalue(head, num);
                 display(head);
                 break;
-            case 4:
+            case 3:
                 printf("\nEnter the position: ");
                 scanf("%d", &pos);
                 deletepos(head, pos);
                 display(head);
                 break;
-            case 5:
+            case 4:
                 printf("\nEnter the element to be searched: ");
                 scanf("%d",&num);
                 pos = search(head, num);
@@ -55,23 +52,23 @@ void main() {
                 else
                     printf("\nElement found at position %d", pos + 1);
                 break;
-            case 6:
+            case 5:
                 printf("\nList Item:\n");
                 display(head);
                 break;
-            case 7:
+            case 6:
                 printf("\nEnter a number to append: ");
                 scanf("%d", &num);
                 append(head, num);
                 printf("\nNumber appended:\n");
                 display(head);
                 break;
-            case 8:
+            case 7:
                 printf("Exiting...");
                 break;
             default:
                 printf("Invalid Choice!!");
                 break;
         }
-    } while (choice != 8);
+    } while (choice != 7);
 }
