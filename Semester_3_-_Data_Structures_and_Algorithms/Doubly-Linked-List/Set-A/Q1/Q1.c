@@ -48,7 +48,7 @@ void main() {
                 scanf("%d",&num);
                 pos = search(head, num);
                 if(pos == -1)
-                    printf("\nElement not found.2");
+                    printf("\nElement not found.");
                 else
                     printf("\nElement found at position %d", pos + 1);
                 break;
