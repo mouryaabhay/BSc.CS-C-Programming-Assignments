@@ -1,34 +1,45 @@
-#define MAXSIZE 100
+#include <stdio.h>
+#include <stdlib.h>
 
-typedef struct {
-    int data[MAXSIZE];
-    int front, rear;
-} QUEUE;
+typedef struct node {
+    int info;
+    struct node* next;
+} NODE;
 
-void init(QUEUE *q) {
-    q->front = q->rear = -1;
+NODE *front, *rear;
+
+void init() {
+    front = rear = NULL;
 }
 
-void enqueue(QUEUE *q, int num) {
-    q->rear++;
-    q->data[q->rear] = num;
+void enqueue(int num) {
+    NODE* newnode = (NODE*) malloc(sizeof(NODE));
+    newnode->info = num;
+    newnode->next = NULL;
+    if (front == NULL) {
+        front = rear = newnode;
+    } else {
+        rear->next = newnode;
+        rear = newnode;
+    }
 }
 
-int dequeue(QUEUE *q) {
+int dequeue() {
     int num;
-    q->front++;
-    num = (q->data[q->front++]);
+    NODE* temp = front;
+    num = front->info;
+    front = front->next;
+    if (front == NULL) {
+        rear = NULL;
+    }
+    free(temp);
     return num;
 }
 
-int peek(QUEUE *q) {
-    return(q->data[q->front++]);
+int peek() {
+    return front->info;
 }
 
-int isfull(QUEUE *q) {
-    return(q->rear == MAXSIZE - 1);
-}
-
-int isempty(QUEUE *q) {
-    return(q->front == q->rear);
+int isempty() {
+    return (front == NULL);
 }
