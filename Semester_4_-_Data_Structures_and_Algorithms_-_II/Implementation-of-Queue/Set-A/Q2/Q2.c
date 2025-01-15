@@ -1,3 +1,6 @@
+// Implement a linear queue library (queue.h) of integers using a dynamic implementation of the queue and implementing the above five operations.
+// Write a  C program that includes queue library and calls different queue operations.
+
 #include <stdio.h>
 #include "queue.h"
 
