@@ -17,12 +17,12 @@ void enqueue(QUEUE *q, int num) {
 int dequeue(QUEUE *q) {
     int num;
     q->front++;
-    num = (q->data[q->front++]);
+    num = (q->data[q->front]);
     return num;
 }
 
 int peek(QUEUE *q) {
-    return(q->data[q->front++]);
+    return(q->data[q->front + 1]);
 }
 
 int isfull(QUEUE *q) {

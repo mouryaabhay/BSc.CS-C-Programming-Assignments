@@ -30,8 +30,7 @@ int main() {
                 if (isempty()) {
                     printf("Queue is empty. Cannot dequeue.\n");
                 } else {
-                    num = dequeue();
-                    printf("%d dequeued successfully.\n", num);
+                    printf("%d dequeued successfully.\n", dequeue());
                 }
                 break;
 
@@ -39,8 +38,7 @@ int main() {
                 if (isempty()) {
                     printf("Queue is empty. Cannot peek.\n");
                 } else {
-                    num = peek();
-                    printf("Front element is: %d\n", num);
+                    printf("Front element is: %d\n", peek());
                 }
                 break;
 
