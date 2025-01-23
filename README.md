@@ -47,23 +47,23 @@
   <summary>Semester 3: Data Structures and Alogrithms - I</summary>
 
   - Practice Assignment of C Programming: Functions, Array, Pointers & Structures
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I\Practice-Assignment-of-C-Programming\README.md)
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I/Practice-Assignment-of-C-Programming/README.md)
   - Assignment 1: Searching Algorithms
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I\Searching-Algorithms\README.md)
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I/Searching-Algorithms/README.md)
   - Assignment 2: Sorting Algorithms - I
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I\Sorting-Algorithms-I\README.md)
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I/Sorting-Algorithms-I/README.md)
   - Assignment 3: Sorting Algorithms - II
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I\Sorting-Algorithms-II\README.md)
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I/Sorting-Algorithms-II/README.md)
   - Assignment 4: Stack Implementation
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I\Stack-Implementation\README.md)
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I/Stack-Implementation/README.md)
   - Assignment 5: Application of Stack
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I\Application-of-Stack\README.md)
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I/Application-of-Stack/README.md)
   - Assignment 6: Singly Linked List
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I\Singly-Linked-List\README.md)
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I/Singly-Linked-List/README.md)
   - Assignment 7: Applications of Singly Linked List
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I\Applications-of-Singly-Linked-List\README.md)
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I/Applications-of-Singly-Linked-List/README.md)
   - Assignment 8: Doubly Linked List
-    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I\Doubly-Linked-List\README.md)
+    > [Visit](Semester_3_-_Data_Structures_and_Algorithms_-_I/Doubly-Linked-List/README.md)
 
 </details>
 <details>
