@@ -20,17 +20,17 @@ int main() {
 
         switch (choice) {
             case 1:
-                printf("Enter the number to enqueue: ");
+                printf("Enter the number to add: ");
                 scanf("%d", &num);
-                enqueue(num);
-                printf("%d enqueued successfully.\n", num);
+                addq(num);
+                printf("%d added successfully.\n", num);
                 break;
 
             case 2:
                 if (isempty()) {
-                    printf("Queue is empty. Cannot dequeue.\n");
+                    printf("Queue is empty. Cannot remove.\n");
                 } else {
-                    printf("%d dequeued successfully.\n", dequeue());
+                    printf("%d removed successfully.\n", removeq());
                 }
                 break;
 

@@ -9,12 +9,20 @@ void init(QUEUE *q) {
     q->front = q->rear = -1;
 }
 
-void enqueue(QUEUE *q, int num) {
+int isfull(QUEUE *q) {
+    return(q->rear == MAXSIZE - 1);
+}
+
+int isempty(QUEUE *q) {
+    return(q->front == q->rear);
+}
+
+void addq(QUEUE *q, int num) {
     q->rear++;
     q->data[q->rear] = num;
 }
 
-int dequeue(QUEUE *q) {
+int removeq(QUEUE *q) {
     int num;
     q->front++;
     num = (q->data[q->front]);
@@ -23,12 +31,4 @@ int dequeue(QUEUE *q) {
 
 int peek(QUEUE *q) {
     return(q->data[q->front + 1]);
-}
-
-int isfull(QUEUE *q) {
-    return(q->rear == MAXSIZE - 1);
-}
-
-int isempty(QUEUE *q) {
-    return(q->front == q->rear);
 }

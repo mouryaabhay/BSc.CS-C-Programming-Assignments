@@ -71,6 +71,6 @@
   <summary>Semester 4: Data Structures and Alogrithms - II</summary>
 
   - Assignment 1: Implementation of Queue
-    > [Visit](Semester_4_-_Data_Structures_and_Algorithms_-_II\Implementation-of-Queue\README.md)
+    > [Visit](Semester_4_-_Data_Structures_and_Algorithms_-_II/Implementation-of-Queue/README.md)
 
 </details>

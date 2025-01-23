@@ -12,7 +12,11 @@ void init() {
     front = rear = NULL;
 }
 
-void enqueue(int num) {
+int isempty() {
+    return (front == NULL);
+}
+
+void addq(int num) {
     NODE* newnode = (NODE*) malloc(sizeof(NODE));
     newnode->info = num;
     newnode->next = NULL;
@@ -24,7 +28,7 @@ void enqueue(int num) {
     }
 }
 
-int dequeue() {
+int removeq() {
     int num;
     NODE* temp = front;
     num = front->info;
@@ -38,8 +42,4 @@ int dequeue() {
 
 int peek() {
     return front->info;
-}
-
-int isempty() {
-    return (front == NULL);
 }
