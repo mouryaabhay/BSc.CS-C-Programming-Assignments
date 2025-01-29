@@ -36,6 +36,7 @@ NODE *removeq(QUEUE *q) {
 
 /* -------- QUEUE FUNCTIONS -------- */
 
+/* Function to create a binary search tree */
 NODE *createbst(NODE *root) {
     NODE *newnode, *temp, *parent;
     int i, n, num;
@@ -47,7 +48,7 @@ NODE *createbst(NODE *root) {
         scanf("%d", &num);
         newnode->info = num;
         newnode->left = newnode->right = NULL;
-        /* Attach newnode to the tree */
+        
         if(root == NULL) {
             root = newnode;
             continue;
@@ -62,41 +63,36 @@ NODE *createbst(NODE *root) {
             }
         }
         if(num < parent->info) {
-            parent->left = newnode; /* Attach node */
+            parent->left = newnode;
         } else {
-            parent->right = newnode; /* Attach node */
+            parent->right = newnode;
         }
-    } // End for
-    return(root);
+    }
+    return root;
 }
 
-void nodesAtLevel(NODE *root) {
-    int i, level = 0, nodeCount = 0;
-    NODE *temp, *marker = NULL;
+/* Function to perform level-order traversal */
+void levelOrderTraversal(NODE *root) {
+    if (root == NULL) return;
     QUEUE q;
     initq(&q);
     addq(&q, root);
-    addq(&q, marker);
-    printf("\nLevel %d --> ", level);
-    while(!isempty(&q)) {
-        temp = removeq(&q);
-        if(temp == marker) {
-            level++;
-            if(!isempty(&q)) {
-                addq(&q, marker);
-                printf("\nLevel %d --> ", level);
-            }
-        } else {
-            nodeCount++;
-            printf("1. %d\n", nodeCount);
-            printf("%d\t", temp->info);
-            if(temp->left) {
-                addq(&q, temp->left);
-            }
-            if(temp->right) {
-                addq(&q, temp->right);
-            }
+    int i, level = 0;
+    printf("\nDisplaying nodes at each level:\n");
+    while (!isempty(&q)) {
+        int nodesAtCurrentLevel = q.rear - q.front;  // Number of nodes at the current level
+        printf("Level %d: ", level);
+        printf("\n- Elements: ");
+        // Process all nodes at the current level
+        for (i = 0; i < nodesAtCurrentLevel; i++) {
+            NODE *current = removeq(&q);
+            printf("%d  ", current->info);
+            // Add left and right children of current node to the queue
+            if (current->left) addq(&q, current->left);
+            if (current->right) addq(&q, current->right);
         }
+        printf("\n- Total Nodes: %d\n", nodesAtCurrentLevel);
+        level++;
     }
-    printf("\nTotal Levels: %d\n", level);
+    printf("\nTotal levels in the tree: %d\n", level);
 }

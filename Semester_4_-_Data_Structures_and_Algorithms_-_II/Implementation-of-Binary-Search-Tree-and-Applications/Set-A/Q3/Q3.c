@@ -4,14 +4,11 @@
 #include <stdlib.h>
 #include "btree.h"
 
-
 void main() {
     NODE *root = NULL;
     root = createbst(root);
-    printf("\nNodes at each level:\n");
-    nodesAtLevel(root);
-    printf("\nCount of nodes at each level:\n");
-    printf("\nTotal level:\n");
+    // Print the tree nodes by levels
+    levelOrderTraversal(root);
 }
 
 /* Input
