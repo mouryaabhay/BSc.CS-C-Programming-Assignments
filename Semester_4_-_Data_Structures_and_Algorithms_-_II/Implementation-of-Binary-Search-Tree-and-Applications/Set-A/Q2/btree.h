@@ -56,9 +56,8 @@ int countLeaf(NODE *root) {
     static int leaf = 0;
     NODE *temp = root;
     if(temp != NULL) {
-        if((temp->left == NULL) && (temp->right == NULL)) {
+        if((temp->left == NULL) && (temp->right == NULL))
             leaf++;
-        }
         countLeaf(temp->left);
         countLeaf(temp->right);
     }

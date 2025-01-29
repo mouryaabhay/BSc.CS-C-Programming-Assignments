@@ -12,3 +12,8 @@ void main() {
     printf("\nNode Count: %d\n", countNode(root));
     printf("\nLeaf Count: %d\n", countLeaf(root));
 }
+
+/* Input
+    How many nodes: 5
+    Enter the 5 elements: 10 5 15 1 7
+*/
