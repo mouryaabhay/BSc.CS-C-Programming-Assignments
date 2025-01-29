@@ -51,3 +51,8 @@ void main() {
         }
     } while (choice != 5);
 }
+
+/* Input
+    How many nodes: 5
+    Enter the 5 elements: 10 5 15 1 7
+*/
