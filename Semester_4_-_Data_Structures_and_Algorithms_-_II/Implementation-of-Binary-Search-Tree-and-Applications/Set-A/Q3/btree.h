@@ -80,7 +80,7 @@ void levelOrderTraversal(NODE *root) {
     int i, level = 0;
     printf("\nDisplaying nodes at each level:\n");
     while (!isempty(&q)) {
-        int nodesAtCurrentLevel = q.rear - q.front;  // Number of nodes at the current level
+        int nodesAtCurrentLevel = q.rear - q.front; // Number of nodes at the current level
         printf("Level %d: ", level);
         printf("\n- Elements: ");
         // Process all nodes at the current level
