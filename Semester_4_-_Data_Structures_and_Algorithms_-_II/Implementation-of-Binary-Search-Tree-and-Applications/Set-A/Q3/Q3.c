@@ -7,7 +7,6 @@
 void main() {
     NODE *root = NULL;
     root = createbst(root);
-    // Print the tree nodes by levels
     levelOrderTraversal(root);
 }
 
