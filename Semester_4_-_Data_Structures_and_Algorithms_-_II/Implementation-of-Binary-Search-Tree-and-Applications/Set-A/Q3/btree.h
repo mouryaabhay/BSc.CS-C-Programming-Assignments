@@ -30,9 +30,9 @@ NODE *removeq(QUEUE *q) {
     return q->data[++q->front];
 }
 
-/* -------- QUEUE FUNCTIONS -------- */
+/* -------- BINARY SEARCH TREE FUNCTIONS -------- */
 
-/* Function to create a binary search tree */
+// Function to create a binary search tree
 NODE *createbst(NODE *root) {
     NODE *newnode, *temp, *parent;
     int i, n, num;
