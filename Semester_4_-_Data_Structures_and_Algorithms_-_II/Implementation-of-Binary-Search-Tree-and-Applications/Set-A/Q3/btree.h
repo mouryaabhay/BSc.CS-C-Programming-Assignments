@@ -18,10 +18,6 @@ void initq(QUEUE *q) {
     q->front = q->rear = -1;
 }
 
-int isfull(QUEUE *q) {
-    return(q->rear == MAXSIZE - 1);
-}
-
 int isempty(QUEUE *q) {
     return(q->front == q->rear);
 }
@@ -42,7 +38,7 @@ NODE *createbst(NODE *root) {
     int i, n, num;
     printf("\nHow many nodes: ");
     scanf("%d", &n);
-    printf("Enter the %d elements:\n", n);
+    printf("Enter the %d elements: ", n);
     for(i = 0; i < n; i++) {
         newnode = (NODE*) malloc(sizeof(NODE));
         scanf("%d", &num);
@@ -71,7 +67,43 @@ NODE *createbst(NODE *root) {
     return root;
 }
 
-/* Function to perform level-order traversal */
+// Function to perform level-order traversal
+void levelOrderTraversal(NODE *root) {
+    int i, level = 0, count = 0;
+    NODE *temp, *marker = NULL;
+    QUEUE q;
+    initq(&q);
+    addq(&q, root);
+    addq(&q, marker);
+    printf("\nLevel %d: ", level);
+    printf("\n- Elements: ");
+    while(!isempty(&q)) {
+        temp = removeq(&q);
+        if(temp == marker) {
+            printf("\n- Total Nodes: %d\n", count);
+            level++;
+            count = 0;
+            if(!isempty(&q)) {
+                addq(&q, marker);
+                printf("\nLevel %d: ", level);
+                printf("\n- Elements: ");
+            }
+        } else {
+            count++;
+            printf("%d  ", temp->info);
+            if(temp->left != NULL) {
+                addq(&q, temp->left);
+            }
+            if(temp->right != NULL) {
+                addq(&q, temp->right);
+            }
+        }
+    }
+    printf("\nTotal levels in the tree: %d.", level);
+}
+
+/*
+// Function to perform level-order traversal
 void levelOrderTraversal(NODE *root) {
     if (root == NULL) return;
     QUEUE q;
@@ -96,3 +128,4 @@ void levelOrderTraversal(NODE *root) {
     }
     printf("\nTotal levels in the tree: %d\n", level);
 }
+*/
