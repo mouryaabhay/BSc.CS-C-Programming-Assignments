@@ -4,7 +4,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX_VERTICES 10
+
+#define MAX_VERTICES 10  // Maximum number of vertices in the graph
+#define MATRIX_SIZE MAX_VERTICES  // Dimension of the adjacency matrix (square matrix)
 
 typedef struct node {
     int vertex;
@@ -13,7 +15,7 @@ typedef struct node {
 
 NODE *list[MAX_VERTICES];
 
-void createMatrix(int m[MAX_VERTICES][MAX_VERTICES], int n) {
+void createMatrix(int m[MATRIX_SIZE][MATRIX_SIZE], int n) {
     int i, j;
     for (i = 0; i < n; i++) {
         for (j = 0; j < n; j++) {
@@ -26,7 +28,7 @@ void createMatrix(int m[MAX_VERTICES][MAX_VERTICES], int n) {
     }
 }
 
-void displayMatrix(int m[MAX_VERTICES][MAX_VERTICES], int n) {
+void displayMatrix(int m[MATRIX_SIZE][MATRIX_SIZE], int n) {
     int i, j;
     printf("\nThe adjacency matrix is:\n");
     for (i = 0; i < n; i++) {
@@ -37,7 +39,7 @@ void displayMatrix(int m[MAX_VERTICES][MAX_VERTICES], int n) {
     }
 }
 
-void createList (int m[10][10], int n) {
+void createList (int m[MATRIX_SIZE][MATRIX_SIZE], int n) {
     int i, j;
     struct node *temp, *newnode;
     for (i = 0; i < n; i++) {
@@ -74,37 +76,45 @@ void displayList (int n) {
     printf("\n");
 }
 
-void calculateIndegree(int m[MAX_VERTICES][MAX_VERTICES], int indegree[MAX_VERTICES], int n) {
-    for (int v = 0; v < n; v++) {
+void calculateIndegree(int m[MATRIX_SIZE][MATRIX_SIZE], int indegree[], int n) {
+    int v, i;
+    for (v = 0; v < n; v++) {
         indegree[v] = 0; // Initialize indegree for vertex v
-        for (int i = 0; i < n; i++) {
+        for (i = 0; i < n; i++) {
             indegree[v] += m[i][v]; // Sum of column v
         }
     }
 }
 
-void calculateOutdegree(int m[MAX_VERTICES][MAX_VERTICES], int outdegree[MAX_VERTICES], int n) {
-    for (int v = 0; v < n; v++) {
+void calculateOutdegree(int m[MATRIX_SIZE][MATRIX_SIZE], int outdegree[], int n) {
+    int v, i;
+    for (v = 0; v < n; v++) {
         outdegree[v] = 0; // Initialize outdegree for vertex v
-        for (int i = 0; i < n; i++) {
+        for (i = 0; i < n; i++) {
             outdegree[v] += m[v][i]; // Sum of row v
         }
     }
 }
 
-void printDegrees(int indegree[MAX_VERTICES], int outdegree[MAX_VERTICES], int n) {
-    printf("\nVertex Indegree Outdegree Total Degree\n");
-    for (int v = 0; v < n; v++) {
-        int totalDegree = indegree[v] + outdegree[v];
-        printf("%d\t%d\t%d\t%d\n", v + 1, indegree[v], outdegree[v], totalDegree);
+void calcDegrees(int m[MATRIX_SIZE][MATRIX_SIZE], int indegree[], int outdegree[], int n) {
+    int v, totalDegree = 0;
+
+    calculateIndegree(m, indegree, n);
+    calculateOutdegree(m, outdegree, n);
+
+    printf("\nVertex  Indegree  Outdegree  Total Degree\n");
+    for (v = 0; v < n; v++) {
+        totalDegree = indegree[v] + outdegree[v];
+        printf("%d\t%d\t\t%d\t\t%d\n", v + 1, indegree[v], outdegree[v], totalDegree);
     }
 }
 
 void main() {
-    int m[MAX_VERTICES][MAX_VERTICES], n;
-    int indegree[MAX_VERTICES], outdegree[MAX_VERTICES];
+    int n;
+    int m[MATRIX_SIZE][MATRIX_SIZE];
+    int indegree[MATRIX_SIZE], outdegree[MATRIX_SIZE];
 
-    printf("Enter the number of vertices: ");
+    printf("Enter the number of vertices (max %d): ", MAX_VERTICES);
     scanf("%d", &n);
 
     createMatrix(m, n);
@@ -113,14 +123,12 @@ void main() {
     createList(m ,n);
     displayList(n);
 
-    calculateIndegree(m, indegree, n);
-    calculateOutdegree(m, outdegree, n);
-    printDegrees(indegree, outdegree, n);
+    calcDegrees(m, indegree, outdegree, n);
 }
 
 /* Expected Output
 
-Enter the number of vertices: 5
+Enter the number of vertices (max 10): 5
 Is there an edge between 1 -> 2 (1/0): 1
 Is there an edge between 1 -> 3 (1/0): 1
 Is there an edge between 1 -> 4 (1/0): 1
@@ -156,11 +164,11 @@ v3-> v4 -> v5 -> NULL
 v4-> v5 -> NULL
 v5-> NULL
 
-Vertex Indegree Outdegree Total Degree        
-1       0       3       3
-2       1       1       2
-3       2       2       4
-4       2       1       3
-5       2       0       2
+Vertex  Indegree  Outdegree  Total Degree
+1       0               3               3
+2       1               1               2
+3       2               2               4
+4       2               1               3
+5       2               0               2
 
 */

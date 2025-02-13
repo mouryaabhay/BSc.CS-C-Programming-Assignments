@@ -2,8 +2,8 @@
 // Implement funtions to traverse the graph using Breadth First Search(BFS).
 
 #include <stdio.h>
-#define MAXSIZE 20
-#define MAX_MATSIZE 5
+#define MAXSIZE 25
+#define MATSIZE 5
 
 typedef struct {
     int data[MAXSIZE];
@@ -26,7 +26,7 @@ int isempty (QUEUE *pq) {
     return (pq->rear == pq->front);
 }
 
-void bfs(int m[MAX_MATSIZE][MAX_MATSIZE], int n) {
+void bfs(int m[MATSIZE][MATSIZE], int n) {
     int i, j, v, w;
     int visited[20] = {0};
     QUEUE q;
@@ -48,7 +48,7 @@ void bfs(int m[MAX_MATSIZE][MAX_MATSIZE], int n) {
 }
 
 void main () {
-    int m[MAX_MATSIZE][MAX_MATSIZE] = {{0,0,1,1,0}, {0,0,1,0,1}, {0,1,0,0,0}, {0,0,0,0,1}, {0,0,0,0,0,}};
+    int m[MATSIZE][MATSIZE] = {{0,0,1,1,0}, {0,0,1,0,1}, {0,1,0,0,0}, {0,0,0,0,1}, {0,0,0,0,0,}};
     printf ("\nThe Breath first traversal is: ");
-    bfs (m, MAX_MATSIZE);
+    bfs (m, MATSIZE);
 }
