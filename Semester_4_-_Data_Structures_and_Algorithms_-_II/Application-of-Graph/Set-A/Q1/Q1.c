@@ -1,7 +1,7 @@
 // Write a C program for the implementation of Topological sorting.
 
 #include <stdio.h>
-#define MAXSIZE 20
+#define MAXSIZE 25
 #define MAX_MATSIZE 5
 
 typedef struct {
@@ -10,20 +10,11 @@ typedef struct {
 } STACK;
 
 void push(STACK *ps, int n) {
-    if (ps->top < MAXSIZE - 1) {
-        ps->data[++ps->top] = n;
-    } else {
-        printf("Stack overflow\n");
-    }
+    ps->data[++ps->top] = n;
 }
 
 int pop(STACK *ps) {
-    if (ps->top >= 0) {
-        return ps->data[ps->top--];
-    } else {
-        printf("Stack underflow\n");
-        return -1; // Return an invalid value
-    }
+    return ps->data[ps->top--];
 }
 
 void init(STACK *ps) {
