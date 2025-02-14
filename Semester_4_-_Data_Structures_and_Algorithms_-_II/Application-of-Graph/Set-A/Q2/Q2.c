@@ -2,9 +2,9 @@
 
 #include <stdio.h>
 
-#define MATSIZE 8
+#define MAX_MATSIZE 8
 
-void dijkstra (int v, int n, int cost[MATSIZE][MATSIZE]) {
+void dijkstra (int v, int n, int cost[MAX_MATSIZE][MAX_MATSIZE]) {
     int i, j, u, w, count, min;
     int dist[10], visited[10] = {0};
     visited[v] = 1;
@@ -35,7 +35,7 @@ void dijkstra (int v, int n, int cost[MATSIZE][MATSIZE]) {
 }
 
 void main () {
-    int cost[MATSIZE][MATSIZE] = {
+    int cost[MAX_MATSIZE][MAX_MATSIZE] = {
         {0, 999, 999, 999, 999, 999, 999, 999},
         {30, 0, 999, 999, 999, 999, 999, 999},
         {100, 80, 0, 999, 999, 999, 999, 999},

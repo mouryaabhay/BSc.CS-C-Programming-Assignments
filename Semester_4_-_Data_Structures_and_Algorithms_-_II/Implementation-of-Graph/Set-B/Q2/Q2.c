@@ -2,9 +2,9 @@
 // Implement funtions to traverse the graph using Depth First Search(DFS).
 
 #include <stdio.h>
-#define MATSIZE 5
+#define MAX_MATSIZE 5
 
-void recdfs(int m[MATSIZE][MATSIZE], int n, int v) {
+void recdfs(int m[MAX_MATSIZE][MAX_MATSIZE], int n, int v) {
     int w;
     static int visited[20] = {0};
     visited[v] = 1;
@@ -17,7 +17,7 @@ void recdfs(int m[MATSIZE][MATSIZE], int n, int v) {
 }
 
 void main () {
-    int m[MATSIZE][MATSIZE] = {{0,0,1,1,0}, {0,0,1,0,1}, {0,1,0,0,0}, {0,0,0,0,1}, {0,0,0,0,0,}};
+    int m[MAX_MATSIZE][MAX_MATSIZE] = {{0,0,1,1,0}, {0,0,1,0,1}, {0,1,0,0,0}, {0,0,0,0,1}, {0,0,0,0,0,}};
     printf ("\nThe Depth First Search Traversal is: ");
-    recdfs (m, MATSIZE, 0);
+    recdfs (m, MAX_MATSIZE, 0);
 }

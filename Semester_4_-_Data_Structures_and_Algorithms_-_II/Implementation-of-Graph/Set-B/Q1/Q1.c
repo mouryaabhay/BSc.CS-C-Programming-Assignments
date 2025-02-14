@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #define MAXSIZE 25
-#define MATSIZE 5
+#define MAX_MATSIZE 5
 
 typedef struct {
     int data[MAXSIZE];
@@ -26,7 +26,7 @@ int isempty (QUEUE *pq) {
     return (pq->rear == pq->front);
 }
 
-void bfs(int m[MATSIZE][MATSIZE], int n) {
+void bfs(int m[MAX_MATSIZE][MAX_MATSIZE], int n) {
     int i, j, v, w;
     int visited[20] = {0};
     QUEUE q;
@@ -48,7 +48,7 @@ void bfs(int m[MATSIZE][MATSIZE], int n) {
 }
 
 void main () {
-    int m[MATSIZE][MATSIZE] = {{0,0,1,1,0}, {0,0,1,0,1}, {0,1,0,0,0}, {0,0,0,0,1}, {0,0,0,0,0,}};
+    int m[MAX_MATSIZE][MAX_MATSIZE] = {{0,0,1,1,0}, {0,0,1,0,1}, {0,1,0,0,0}, {0,0,0,0,1}, {0,0,0,0,0,}};
     printf ("\nThe Breath first traversal is: ");
-    bfs (m, MATSIZE);
+    bfs (m, MAX_MATSIZE);
 }

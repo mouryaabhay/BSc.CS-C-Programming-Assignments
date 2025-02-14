@@ -62,7 +62,7 @@ void topologicalSort(int m[MAX_MATSIZE][MAX_MATSIZE], int n) {
     printf("\n");
 }
 
-int main() {
+void main() {
     int m[MAX_MATSIZE][MAX_MATSIZE] = {
         {0, 1, 1, 0, 0},
         {0, 0, 0, 1, 0},
@@ -72,5 +72,4 @@ int main() {
     };
     printf("Topological Sort Order: ");
     topologicalSort(m, MAX_MATSIZE);
-    return 0;
 }
