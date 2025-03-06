@@ -1,72 +1,57 @@
 // Write a program to implement hash table using chaining (Use linked list).
 
 #include <stdio.h>
+#include <stdlib.h>
+#define TABLE_SIZE 10
 
-typedef struct {
+typedef struct node {
     int key;
-    int chain;
-} HT;
+    struct node *next;
+} NODE;
 
-void initialize (HT ht[10]) {
-    int i;
-    for (i = 0; i < 10; i++) {
-        ht[i].key = ht[i].chain = -1;
-    }
+NODE *HT[TABLE_SIZE] = { NULL };
+
+int hf (int key) {
+    return key % TABLE_SIZE;
 }
 
-int hf (int key, int i) {
-    return (key % 10 + i) % 10;
-}
-
-void showTable (HT ht[10]) {
-    int i;
-    for (i = 0; i < 10; i++) {
-        printf ("%d[%d][%d]\n", i, ht[i].key, ht[i].chain);
-    }
-}
-
-void insert (HT ht[10], int key) {
-    int index, oldindex, i = 0;
-    index = hf (key, i);
-    if (ht[index].key == -1) { // Empty Bucket
-        ht[index].key = key;
+void insert (int key) {
+    int index = hf(key);
+    NODE *newnode = NULL, *temp;
+    newnode = (NODE *) malloc (sizeof(NODE));
+    newnode->key = key;
+    newnode->next = NULL;
+    if (HT[index] == NULL) {
+        HT[index] = newnode;
     } else {
-        // Reach the end of the chain
-        while (ht[index].chain != -1) {
-            index = ht[index].chain;
-            oldindex = index;
-            for (i = 1; i < 10; i++) { // Find new location
-                index = hf(key, i);
-                if (ht[index].key == -1) { // Empty Bucket
-                    ht[index].key = key;
-                    ht[oldindex].chain = index; // Form the chain
-                    return;
-                }
-            }
+        temp = HT[index];
+        while (temp->next != NULL) {
+            temp = temp->next;
         }
+        temp->next = newnode;
     }
 }
 
-int search (HT ht[10], int key) {
-    int index = hf(ht, key);
-    while (index != -1) {
-        if (ht[index].key == key) {
-            return index;
-        } else {
-            index = ht[index].chain;
+void showTable() {
+    int i;
+    NODE *temp;
+    printf("\nHash Table:\n");
+    for(i = 0; i < TABLE_SIZE; i++) {
+        printf("Index %d: ", i); 
+        for (temp = HT[i]; temp != NULL; temp = temp->next) {
+            printf("%d -> ", temp->key);
         }
+        printf("NULL\n");
     }
-    return -1;
 }
 
 void main() {
-    HT ht[10];
-    initialize(ht);
-    insert(ht, 11);
-    insert(ht, 32);
-    insert(ht, 41);
-    insert(ht, 54);
-    insert(ht, 33);
-    insert(ht, 61);
-    insert(ht, 72);
+    insert(80);
+    insert(23);
+    insert(34);
+    insert(48);
+    insert(73);
+    insert(93);
+    insert(78);
+    showTable();
 }
