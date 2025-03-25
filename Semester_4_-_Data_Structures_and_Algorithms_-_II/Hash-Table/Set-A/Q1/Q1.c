@@ -50,19 +50,27 @@ int digitFoldingMethod (int key) {
     return sum % TABLE_SIZE;
 }
 
-int main () {
+int main() {
     int HT[TABLE_SIZE];
-    int i, n, key, choice, index;
+    int n, key, choice, index;
+
+    // Ask for hashing method first
+    printf("\nChoose hashing method");
+    printf("\n 1. Division Method\n 2. Mid Square Method\n 3. Digit Folding Method\n");
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    // Ask for the number of keys to insert
     printf("Enter the number of keys to insert: ");
     scanf("%d", &n);
-    init(HT);
-    for(i = 0; i < n; i++) {
-        printf("\nEnter key %d: ", i+1);
+    
+    init(HT); // Initialize the hash table
+
+    for(int i = 0; i < n; i++) {
+        printf("Enter key %d: ", i + 1);
         scanf("%d", &key);
-        printf("Choose hashing method\n");
-        printf("1. Division Method\n2. Mid Square Method\n3. Digit Folding Method\n");
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
+
+        // Determine the index based on the chosen hashing method
         switch (choice) {
             case 1:
                 index = divisionMethod(key);
@@ -81,6 +89,7 @@ int main () {
                 break;
         }
     }
-    display(HT);
+
+    display(HT); // Display the final state of the hash table
     return 0;
 }
