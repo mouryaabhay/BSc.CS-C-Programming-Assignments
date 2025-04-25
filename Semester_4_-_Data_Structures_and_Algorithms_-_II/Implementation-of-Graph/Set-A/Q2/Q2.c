@@ -41,7 +41,7 @@ void displayMatrix(int m[MATRIX_SIZE][MATRIX_SIZE], int n) {
 
 void createList (int m[MATRIX_SIZE][MATRIX_SIZE], int n) {
     int i, j;
-    struct node *temp, *newnode;
+    NODE *temp, *newnode;
     for (i = 0; i < n; i++) {
         list[i] = NULL;
         for (j = 0; j < n; j++) {
@@ -61,7 +61,7 @@ void createList (int m[MATRIX_SIZE][MATRIX_SIZE], int n) {
 }
 
 void displayList (int n) {
-    struct node *temp;
+    NODE *temp;
     int i;
     printf ("\nThe adjacency list is:");
     for (i = 0; i < n; i++) {

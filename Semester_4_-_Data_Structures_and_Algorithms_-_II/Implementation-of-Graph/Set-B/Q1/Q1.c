@@ -27,12 +27,12 @@ int isempty (QUEUE *pq) {
 }
 
 void bfs(int m[MAX_MATSIZE][MAX_MATSIZE], int n) {
-    int i, j, v, w;
-    int visited[20] = {0};
-    QUEUE q;
-    initq(&q);
+    int v, w;
+    int visited[MAX_MATSIZE] = {0};
     v = 0; // Starting vertex is 0
     visited[v] = 1;
+    QUEUE q;
+    initq(&q);
     addq (&q, v);
     while (!isempty(&q)) {
         v = removeq(&q);
@@ -48,7 +48,13 @@ void bfs(int m[MAX_MATSIZE][MAX_MATSIZE], int n) {
 }
 
 void main () {
-    int m[MAX_MATSIZE][MAX_MATSIZE] = {{0,0,1,1,0}, {0,0,1,0,1}, {0,1,0,0,0}, {0,0,0,0,1}, {0,0,0,0,0,}};
+    int m[MAX_MATSIZE][MAX_MATSIZE] = {
+        {0,0,1,1,0},
+        {0,0,1,0,1},
+        {0,1,0,0,0},
+        {0,0,0,0,1},
+        {0,0,0,0,0,}
+    };
     printf ("\nThe Breath first traversal is: ");
     bfs (m, MAX_MATSIZE);
 }
