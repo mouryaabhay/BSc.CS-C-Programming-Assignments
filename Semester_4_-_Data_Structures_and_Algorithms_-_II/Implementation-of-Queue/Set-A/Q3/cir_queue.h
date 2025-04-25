@@ -31,7 +31,8 @@ void addq(int num) {
 
 int removeq() {
     NODE* front = rear->next;
-    int num = front->info;
+    int num;
+    num = front->info;
     if(rear->next == rear) {
         free(rear);
         rear = NULL;

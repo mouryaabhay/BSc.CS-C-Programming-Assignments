@@ -27,7 +27,9 @@ void addq(QUEUE *q, NODE *treenode) {
 }
 
 NODE *removeq(QUEUE *q) {
-    return q->data[++q->front];
+    int num;
+    num = q->data[++q->front];
+    return num;
 }
 
 /* -------- BINARY SEARCH TREE FUNCTIONS -------- */
