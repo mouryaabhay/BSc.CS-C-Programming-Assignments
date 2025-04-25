@@ -13,7 +13,7 @@ int choose(int n, int dist[MAX_VERTICES], int visited[MAX_VERTICES]) {
             min = dist[i];
             u = i;
         }
-    }
+    }.lk
     return u;
 }
 

@@ -33,14 +33,6 @@ int midSquareMethod(int key) {
     return mid % TABLE_SIZE;
 }
 
-void insert (int HT[TABLE_SIZE], int key, int index) {
-    if (HT[index] == -1) {
-        HT[index] = key;
-    } else {
-        printf("Collision detected at position %d for key %d\n\n", index, key);
-    }
-}
-
 int digitFoldingMethod (int key) {
     int sum = 0;
     while (key > 0) {
@@ -48,6 +40,14 @@ int digitFoldingMethod (int key) {
         key = key / 100;
     }
     return sum % TABLE_SIZE;
+}
+
+void insert (int HT[TABLE_SIZE], int key, int index) {
+    if (HT[index] == -1) {
+        HT[index] = key;
+    } else {
+        printf("Collision detected at position %d for key %d\n\n", index, key);
+    }
 }
 
 int main() {
